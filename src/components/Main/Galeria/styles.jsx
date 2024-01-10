@@ -16,6 +16,13 @@ const StyledDiv = styled.div`
             display: grid;
             grid-template-columns: 48% 48%;
             gap: 1.5rem;
+
+            .no-results {
+                color: ${variables.white};
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 100;
+            }
         }
     }
 
@@ -44,6 +51,12 @@ const StyledDiv = styled.div`
 
         .galeria-container {
             width: 100%;
+
+            .container {
+                .no-results {
+                    font-size: 1.2rem;
+                }
+            }
         }
 
         .populares-container {

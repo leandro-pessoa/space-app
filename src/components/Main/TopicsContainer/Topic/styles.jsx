@@ -8,7 +8,7 @@ const StyledLi = styled.li`
     display: flex;
     align-items: center;
     background-color: ${variables.darkGray};
-    border-radius: .6rem;
+    border-radius: 1rem;
     border: 2px solid;
     border-color: ${props => props.$active ? variables.pink : 'transparent'};
 

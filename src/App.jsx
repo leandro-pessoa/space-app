@@ -21,6 +21,11 @@ const GradientBackground = styled.div`
   padding: 0 1.5rem;
   padding-bottom: 4.5rem;
   overflow: overlay;
+
+ @media (min-width: ${variables.desktop}) {
+  padding: 0 10rem;
+  padding-bottom: 4.5rem;
+ }
 `
 
 const StyledSection = styled.section`

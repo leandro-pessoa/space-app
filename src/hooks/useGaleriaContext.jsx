@@ -76,6 +76,7 @@ const useGaleriaContext = () => {
         dispatch(fillArrayAction())
         dispatch(searchImageAction(searchValue.toLowerCase()))
         setSearchValue('')
+        setActiveCategory(null)
     }
 
     return {

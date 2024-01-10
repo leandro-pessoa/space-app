@@ -27,13 +27,17 @@ const Galeria = () => {
                     <Title align={'left'}>Navegue pela galeria</Title>
                     <div className='container'>
                         {
-                            galeriaArray.map((foto) =>
+                            galeriaArray.length >= 1 ? galeriaArray.map((foto) =>
                                 <CardGaleria
                                     foto={foto}
                                     key={foto.id}
                                     small={true}
                                 />      
                             )
+                            :
+                            <div className='no-results'>
+                                Não há imagens referentes a sua pesquisa.
+                            </div>
                         }
                     </div>
                 </section>

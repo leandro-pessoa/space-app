@@ -17,6 +17,7 @@ const variables = {
     secondaryFont: 'Montserrat',
 
     // breakpoints
+    desktop: '1440px',
     notebook: '1024px',
     tablet: '768px',
     smartphone: '610px'
