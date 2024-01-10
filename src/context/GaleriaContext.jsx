@@ -8,6 +8,8 @@ import popularesImgs from '../populares.json'
 
 const GaleriaContext = createContext()
 
+GaleriaContext.displayName = 'galeria'
+
 const GaleriaProvider = ({ children }) => {
     const [galeriaArray, dispatch] = useReducer(galeriaReducer, galeriaImgs)
     const [popularesArray, setPopularesArray] = useState(popularesImgs)

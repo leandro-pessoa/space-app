@@ -1,18 +1,27 @@
+// funções
+import { useContext } from 'react'
+
 // componentes
 import { StyledAside } from './styles'
 import ListItem from './ListItem'
 import Menu from '../Menu'
 
-const Aside = ({ asideDisplay, setAsideDisplay }) => {
+// context
+import { GaleriaContext } from '../../context/GaleriaContext'
+
+const Aside = () => {
 
     // retorna o caminho da imagem de acordo com o parâmetro passado
     const iconPathName = (iconName) => {
         return `/icones/${iconName}.png`
     }
 
+    // states globais
+    const { asideDisplay } = useContext(GaleriaContext)
+
     return (
         <StyledAside $display={asideDisplay}>
-            <Menu setAsideDisplay={setAsideDisplay}/>
+            <Menu/>
             <nav>
                 <ul>
                     <ListItem

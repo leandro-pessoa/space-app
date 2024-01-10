@@ -6,12 +6,12 @@ import { StyledHeader } from './styles'
 import InputSearch from '../InputSearch'
 import Menu from '../Menu'
 
-const Header = ({ setAsideDisplay }) => {
+const Header = () => {
     return (
         <StyledHeader>
             <img src={logo} alt="Logo do Space App"/>
             <div>
-                <Menu setAsideDisplay={setAsideDisplay}/>
+                <Menu/>
             </div>
             <InputSearch/>
         </StyledHeader>

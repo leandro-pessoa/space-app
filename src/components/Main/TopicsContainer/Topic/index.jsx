@@ -1,7 +1,18 @@
+// funções
+import { useContext } from 'react'
+
 // componenetes
 import { StyledLi } from "./styles"
 
-const Topic = ({ children, id, filterGaleria, activeCategory }) => {
+// context
+import { GaleriaContext } from '../../../../context/GaleriaContext'
+import { useGaleriaContext } from '../../../../hooks/useGaleriaContext'
+
+const Topic = ({ children, id }) => {
+    // states globais
+    const { activeCategory } = useContext(GaleriaContext)
+    const { filterGaleria } = useGaleriaContext()
+
     return (
         <StyledLi $active={activeCategory === id}>
             <button onClick={()=>filterGaleria(id)}>

@@ -7,15 +7,20 @@ import { StyledButton } from "./styles"
 // variáveis
 import variables from "../../variables"
 
+// context
+import { useGaleriaContext } from "../../hooks/useGaleriaContext"
+
 const iconParams = {
     size: 36,
     color: variables.white
 }
 
-const Menu = ({ setAsideDisplay }) => {
+const Menu = () => {
+    const { toggleAsideDisplay } = useGaleriaContext()
+
     return (
         <>
-            <StyledButton onClick={()=>setAsideDisplay()}>
+            <StyledButton onClick={()=>toggleAsideDisplay()}>
                 <IoMenu
                     {...iconParams}
                 />

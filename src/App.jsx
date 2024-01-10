@@ -1,6 +1,5 @@
 // funções
 import { styled } from 'styled-components'
-import { useState } from 'react'
 
 // componentes
 import GlobalStyles from './components/GlobalStyles'
@@ -13,10 +12,6 @@ import Footer from './components/Footer'
 
 // variáveis
 import variables from './variables'
-
-// json
-import galeriaImgs from './fotos.json'
-import popularesImgs from './populares.json'
 
 // context
 import { GaleriaProvider } from './context/GaleriaContext'
@@ -48,75 +43,21 @@ const StyledMain = styled.main`
 `
 
 const App = () => {
-
-  // states
-  const [galeriaArray, setGaleriaArray] = useState(galeriaImgs)
-  const [popularesArray, setPopularesArray] = useState(popularesImgs)
-  const [selectedPicture, setSelectedPicture] = useState(null)
-  const [asideDisplay, setAsideDisplay] = useState(false)
-  const [activeCategory, setActiveCategory] = useState(0)
-
-  // favorita uma imagem
-  const toggleFavorite = (pic) => {
-    if(pic.id === selectedPicture?.id){
-      setSelectedPicture({
-        ...selectedPicture,
-        favorita: !selectedPicture.favorita
-      })
-    }
-
-    setGaleriaArray(galeriaArray.map(foto => {
-      return {
-        ...foto,
-        favorita: foto.id === pic.id ? !pic.favorita : foto.favorita
-      }
-    }))
-  }
-
-  // filtra as imagens da galeria de acordo com o id
-  const filterGaleria = (id) => {
-    setGaleriaArray(galeriaImgs.filter((foto) => {
-      if(foto.tagId === id){ // retorna uma categoria específica
-        return foto
-      }
-      if(id === 0){ // retorna todas as fotos
-        return foto
-      }
-    }))
-    setActiveCategory(id)
-  }
-
   return (
     <GaleriaProvider>
       <GradientBackground>
         <GlobalStyles/>
-        <Header
-          setAsideDisplay={() => setAsideDisplay(!asideDisplay)}
-        />
+        <Header/>
         <StyledSection>
           <div>
-            <Aside
-              asideDisplay={asideDisplay}
-              setAsideDisplay={() => setAsideDisplay(!asideDisplay)}
-            />
+            <Aside/>
             <Banner/>
           </div>
           <StyledMain>
-              <Galeria 
-                galeria={galeriaArray} 
-                populares={popularesArray}
-                onSelectedPicture={(pic) => setSelectedPicture(pic)}
-                onFavorite={(pic) => toggleFavorite(pic)}
-                filterGaleria={(id) => filterGaleria(id)}
-                activeCategory={activeCategory}
-              />
+              <Galeria/>
           </StyledMain>
         </StyledSection>
-        <ZoomModal 
-          foto={selectedPicture}
-          onClose={()=>setSelectedPicture(null)}
-          onFavorite={(pic) => toggleFavorite(pic)}
-        />
+        <ZoomModal/>
       </GradientBackground>
       <Footer/>
     </GaleriaProvider>

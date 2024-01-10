@@ -5,7 +5,7 @@ import Topic from './Topic'
 // json
 import tags from './tags.json'
 
-const TopicsContainer = ({ filterGaleria, activeCategory }) => {
+const TopicsContainer = () => {
     return (
         <StyledSection>
             <h3>
@@ -17,8 +17,6 @@ const TopicsContainer = ({ filterGaleria, activeCategory }) => {
                         <Topic 
                             key={tag.id} 
                             id={tag.id}
-                            filterGaleria={filterGaleria}
-                            activeCategory={activeCategory}
                         >
                             {tag.titulo}
                         </Topic>

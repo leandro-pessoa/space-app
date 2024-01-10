@@ -9,7 +9,13 @@ import { CgArrowsExpandRight } from 'react-icons/cg'
 // variáveis
 import variables from '../../../../variables'
 
-const CardGaleria = ({ small, foto, onSelectedPicture, onFavorite }) => {
+// context
+import { useGaleriaContext } from '../../../../hooks/useGaleriaContext'
+
+const CardGaleria = ({ small, foto }) => {
+    // states globais
+    const { selectPicture, toggleFavorite } = useGaleriaContext()
+
     return (
         <StyledFigure $small={small}>
             <img src={foto.path} alt={`Imagem com o título ${foto.titulo}`}/>
@@ -18,7 +24,7 @@ const CardGaleria = ({ small, foto, onSelectedPicture, onFavorite }) => {
                 <footer>
                     <p>{foto.fonte}</p>
                     <div>
-                        <button onClick={()=>onFavorite(foto)}>
+                        <button onClick={()=>toggleFavorite(foto)}>
                             {
                                 foto.favorita ?
                                 <MdFavorite
@@ -34,7 +40,7 @@ const CardGaleria = ({ small, foto, onSelectedPicture, onFavorite }) => {
                         </button>
                         {   
                             small ?
-                            <button onClick={()=>onSelectedPicture(foto)}>
+                            <button onClick={()=>selectPicture(foto)}>
                                 <CgArrowsExpandRight
                                     size={24}
                                     color={variables.white}
