@@ -12,7 +12,40 @@ As funcionalidades são:
 - `Zoom` : Ao clicar no ícone de expandir, um model aparecerá na tela com o card selecionado, dando uma visão melhor da imagem;
 - `Favoritar` : O usuário pode favoritar as imagens (de maneira temporária).
 
+## ☁️ Acesso ao projeto
+  
+Para acessar o projeto na nuvem [clique aqui]()
+
 ## ⬇️ Download do projeto
+
+Para baixar o projeto clique em 'Code' (botão verde) e, depois, em download ZIP.
+
+## 🔨 Executando o projeto
+
+Para executar o projeto em sua máquina siga os seguintes passos:
+
+- Abra o terminal do seu computador como administrador;
+- Acesse a pasta do projeto após descompactá-la;
+- Instale as dependências do projeto com o comando:
+~~~~
+npm install
+~~~~
+- Abra o servidor com o comando:
+~~~~
+npm run dev
+~~~~
+- Acesse no seu navegador o localhost especificado no terminal.
+
+## ⚛️ Tecnologias utilizadas
+
+- `JavaScript`
+- `React`
+- `Styled components`
+- `Context API`
+
+## :hurtrealbad: Desenvolvedor
+
+Projeto idealizado pela [Alura](https://alura.com.br) e desenvolvido por [Leandro Pessoa](https://github.com/leandro-pessoa).
 
 
 ## 🚧 Projeto em construção 🚧
