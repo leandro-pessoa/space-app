@@ -2,7 +2,7 @@
 import { useContext } from "react"
 
 // context
-import { FILTER_IMGS, TOGGLE_FAVORITE } from "../reducers/galeriaReducer"
+import { FILTER_IMGS, TOGGLE_FAVORITE, FILL_ARRAY, SEARCH_IMG } from "../reducers/galeriaReducer"
 import { GaleriaContext } from "../context/GaleriaContext"
 
 // actions
@@ -16,6 +16,15 @@ const toggleFavoriteAction = (pic) => ({
     payload: pic
 })
 
+const fillArrayAction = () => ({
+    type: FILL_ARRAY
+})
+
+const searchImageAction = (value) => ({
+    type: SEARCH_IMG,
+    payload: value
+})
+
 // funções
 const useGaleriaContext = () => {
     // states globais
@@ -26,6 +35,8 @@ const useGaleriaContext = () => {
         setAsideDisplay,
         selectedPicture,
         setSelectedPicture,
+        searchValue,
+        setSearchValue,
     } = useContext(GaleriaContext)
 
     // dispara a action 'filterAction', filtrando as imagens
@@ -60,12 +71,20 @@ const useGaleriaContext = () => {
         setSelectedPicture(null)
     }
 
+    const searchImage = (e) => {
+        e.preventDefault()
+        dispatch(fillArrayAction())
+        dispatch(searchImageAction(searchValue.toLowerCase()))
+        setSearchValue('')
+    }
+
     return {
         filterGaleria,
         toggleFavorite,
         toggleAsideDisplay,
         selectPicture,
-        closeModal
+        closeModal,
+        searchImage
     }
 }
 

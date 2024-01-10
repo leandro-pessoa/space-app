@@ -16,6 +16,7 @@ const GaleriaProvider = ({ children }) => {
     const [selectedPicture, setSelectedPicture] = useState(null)
     const [asideDisplay, setAsideDisplay] = useState(false)
     const [activeCategory, setActiveCategory] = useState(0)
+    const [searchValue, setSearchValue] = useState('')
 
     const states = {
         galeriaArray,
@@ -27,7 +28,9 @@ const GaleriaProvider = ({ children }) => {
         asideDisplay,
         setAsideDisplay,
         activeCategory,
-        setActiveCategory
+        setActiveCategory,
+        searchValue,
+        setSearchValue
     }
 
     return (

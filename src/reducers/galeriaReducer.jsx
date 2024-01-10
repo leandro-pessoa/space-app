@@ -4,6 +4,8 @@ import galeriaImgs from '../fotos.json'
 // nomes das actions
 const FILTER_IMGS = 'FILTER_IMGS'
 const TOGGLE_FAVORITE = 'TOGGLE_FAVORITE'
+const SEARCH_IMG = 'SEARCH_IMG'
+const FILL_ARRAY = 'FILL_ARRAY'
 
 const galeriaReducer = (state, action) => {
     switch(action.type) {
@@ -27,9 +29,16 @@ const galeriaReducer = (state, action) => {
                   favorita: foto.id === pic.id ? !pic.favorita : foto.favorita
                 }
             })
+        case FILL_ARRAY:
+            return [
+                ...galeriaImgs
+            ]
+        case SEARCH_IMG:
+            const value = action.payload
+            return state.filter(foto => ((foto.titulo).toLowerCase().split(' ')).includes(value))
         default:
             return state
     }
 }
 
-export { FILTER_IMGS, TOGGLE_FAVORITE, galeriaReducer}
+export { FILTER_IMGS, TOGGLE_FAVORITE, FILL_ARRAY, SEARCH_IMG, galeriaReducer}
