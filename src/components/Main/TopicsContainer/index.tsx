@@ -3,7 +3,7 @@ import { StyledSection } from './styles'
 import Topic from './Topic'
 
 // json
-import tags from './tags.json'
+import tags from '@/mocks/tags.json'
 
 const TopicsContainer = () => {
     return (

@@ -6,8 +6,8 @@ import { IGaleria } from "@/shared/interfaces/IGaleria"
 import { IPopulares } from "@/shared/interfaces/IPopulares"
 
 // json
-import galeriaImgs from '@/fotos.json'
-import popularesImgs from '@/populares.json'
+import galeriaImgs from '@/mocks/fotos.json'
+import popularesImgs from '@/mocks/populares.json'
 
 // tipagem dos states
 interface StatesTypes {
