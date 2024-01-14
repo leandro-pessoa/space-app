@@ -1,10 +1,12 @@
 // funções
-import { useAppDispatch } from "../../features/hooks"
+import { useAppDispatch } from "@/features/hooks"
 import { useState } from "react"
 
 // componentes
 import { StyledForm } from "./styles"
-import { fillArray, searchImage } from "../../features/reducer"
+
+// actions
+import { fillArray, searchImage } from "@/features/reducer"
 
 const InputSearch = () => {
     // states

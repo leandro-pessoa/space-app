@@ -1,8 +1,8 @@
 // funções
-import { useAppDispatch } from "../../features/hooks"
+import { useAppDispatch } from "@/features/hooks"
 
 // actions
-import { toggleAsideDisplay } from "../../features/reducer"
+import { toggleAsideDisplay } from "@/features/reducer"
 
 // ícones
 import { IoMenu } from "react-icons/io5"
@@ -11,10 +11,10 @@ import { IoMenu } from "react-icons/io5"
 import { StyledButton } from "./styles"
 
 // variáveis
-import variables from "../../variables"
+import variables from "@/variables"
 
 // tipagens externas
-import { IIcons } from "../../shared/interfaces/IIcons"
+import { IIcons } from "@/shared/interfaces/IIcons"
 
 const iconParams: IIcons = {
     size: 36,

@@ -6,7 +6,7 @@ import GandhiRegular from './fontes/GandhiSans-Regular.otf'
 import GandhiBold from './fontes/GandhiSans-Bold.otf'
 
 // variáveis
-import variables from "../../variables"
+import variables from "@/variables"
 
 const GlobalStyles = createGlobalStyle`
 

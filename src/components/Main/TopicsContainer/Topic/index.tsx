@@ -1,12 +1,12 @@
 // funções
 import { ReactElement } from 'react'
-import { useAppDispatch, useAppSelector } from '../../../../features/hooks'
+import { useAppDispatch, useAppSelector } from '@/features/hooks'
 
 // componenetes
 import { StyledLi } from "./styles"
 
 // actions
-import { filterImgs } from '../../../../features/reducer'
+import { filterImgs } from '@/features/reducer'
 
 // tipagem dos props
 interface TopicProps {

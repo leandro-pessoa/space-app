@@ -7,10 +7,10 @@ import { BsTwitterX } from "react-icons/bs"
 import { FaInstagram } from "react-icons/fa"
 
 // variáveis
-import variables from "../../variables"
+import variables from "@/variables"
 
 // tipagens externas
-import { IIcons } from "../../shared/interfaces/IIcons"
+import { IIcons } from "@/shared/interfaces/IIcons"
 
 const Footer = () => {
     const iconsParams: IIcons = {

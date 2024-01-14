@@ -1,13 +1,13 @@
 // funções
-import { useAppSelector } from '../../../features/hooks'
+import { useAppSelector } from '@/features/hooks'
 
 // componentes
 import TopicsContainer from '../TopicsContainer'
-import Title from "../../Title"
+import Title from "@/components/Title"
 import { StyledDiv } from './styles'
 import CardGaleria from './CardGaleria'
 import CardPopular from './CardPopular'
-import ButtonSeeMore from '../../ButtonSeeMore'
+import ButtonSeeMore from '@/components/ButtonSeeMore'
 
 const Galeria = () => {
     // states globais

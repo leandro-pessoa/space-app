@@ -2,7 +2,7 @@
 import { styled } from 'styled-components'
 
 // variáveis
-import variables from '../../variables'
+import variables from '@/variables'
 
 // imagens
 import searchIcon from '/icones/search.png'

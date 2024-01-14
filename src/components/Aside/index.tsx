@@ -1,5 +1,5 @@
 // funções
-import { useAppSelector } from '../../features/hooks'
+import { useAppSelector } from '@/features/hooks'
 
 // componentes
 import { StyledAside } from './styles'

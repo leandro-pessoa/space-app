@@ -1,5 +1,5 @@
 // funções
-import { useAppDispatch } from '../../../../features/hooks'
+import { useAppDispatch } from '@/features/hooks'
 
 // componentes
 import { StyledFigure } from './styles'
@@ -10,13 +10,13 @@ import { MdFavoriteBorder } from 'react-icons/md'
 import { CgArrowsExpandRight } from 'react-icons/cg'
 
 // variáveis
-import variables from '../../../../variables'
+import variables from '@/variables'
 
 // actions
-import { toggleFavorite, selectPicture } from '../../../../features/reducer'
+import { toggleFavorite, selectPicture } from '@/features/reducer'
 
 // tipagens externas
-import { IGaleria } from '../../../../shared/interfaces/IGaleria'
+import { IGaleria } from '@/shared/interfaces/IGaleria'
 
 // tipagem dos props
 interface CardGaleriaProps {

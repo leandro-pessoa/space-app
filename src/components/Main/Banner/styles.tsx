@@ -2,10 +2,10 @@
 import { styled } from 'styled-components'
 
 // imagens
-import background from '../../../assets/banner.png'
+import background from '@/assets/banner.png'
 
 // variáveis
-import variables from '../../../variables'
+import variables from '@/variables'
 
 const StyledSection = styled.section`
     display: flex;

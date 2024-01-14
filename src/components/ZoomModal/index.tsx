@@ -1,5 +1,5 @@
 // funções
-import { useAppDispatch, useAppSelector } from "../../features/hooks"
+import { useAppDispatch, useAppSelector } from "@/features/hooks"
 
 // componentes
 import CardGaleria from "../Main/Galeria/CardGaleria"
@@ -9,10 +9,10 @@ import { Overlay, StyledDialog } from "./styles"
 import { IoIosClose } from "react-icons/io"
 
 // variáveis
-import variables from "../../variables"
+import variables from "@/variables"
 
 // actions
-import { closeModal } from "../../features/reducer"
+import { closeModal } from "@/features/reducer"
 
 const ZoomModal = () => {
     // states globais

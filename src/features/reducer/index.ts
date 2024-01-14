@@ -2,12 +2,12 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 // tipagens externas
-import { IGaleria } from "../../shared/interfaces/IGaleria"
-import { IPopulares } from "../../shared/interfaces/IPopulares"
+import { IGaleria } from "@/shared/interfaces/IGaleria"
+import { IPopulares } from "@/shared/interfaces/IPopulares"
 
 // json
-import galeriaImgs from '../../fotos.json'
-import popularesImgs from '../../populares.json'
+import galeriaImgs from '@/fotos.json'
+import popularesImgs from '@/populares.json'
 
 // tipagem dos states
 interface StatesTypes {

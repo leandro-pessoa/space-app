@@ -2,10 +2,10 @@
 import { styled } from 'styled-components'
 
 // variáveis
-import variables from '../../variables'
+import variables from '@/variables'
 
 // tipagens externas
-import { IGaleria } from '../../shared/interfaces/IGaleria'
+import { IGaleria } from '@/shared/interfaces/IGaleria'
 
 // tipagem dos props
 interface OverlayProps {
