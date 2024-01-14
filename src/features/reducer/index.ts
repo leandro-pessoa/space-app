@@ -15,7 +15,7 @@ interface StatesTypes {
     popularesArray: IPopulares[],
     selectedPicture: IGaleria | null,
     asideDisplay: boolean,
-    activeCategory: number,
+    activeCategory: number | null,
     searchValue: string
 }
 
@@ -40,7 +40,7 @@ export const galeriaSlice = createSlice({
                 if (foto.tagId === id) {
                     return foto
                 }
-                if (foto.tagId === 0) {
+                if (id === 0) {
                     return foto
                 }
                 return
@@ -54,7 +54,6 @@ export const galeriaSlice = createSlice({
                     ...state.selectedPicture,
                     favorita: !state.selectedPicture.favorita
                 }
-                return
             }
             state.galeriaArray = state.galeriaArray.map(foto => {
                 return {
@@ -81,7 +80,7 @@ export const galeriaSlice = createSlice({
                 ((foto.titulo).toLowerCase().split(' ')).includes(value)
             )
             state.searchValue = ''
-            state.activeCategory = 0
+            state.activeCategory = null
         }
     }
 })
