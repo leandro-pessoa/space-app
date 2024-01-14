@@ -13,9 +13,6 @@ import Footer from './components/Footer'
 // variáveis
 import variables from './variables'
 
-// context
-import { GaleriaProvider } from './context/GaleriaContext'
-
 const GradientBackground = styled.div`
   background: ${variables.blueGradient};
   padding: 0 1.5rem;
@@ -49,7 +46,7 @@ const StyledMain = styled.main`
 
 const App = () => {
   return (
-    <GaleriaProvider>
+    <>
       <GradientBackground>
         <GlobalStyles/>
         <Header/>
@@ -65,7 +62,7 @@ const App = () => {
         <ZoomModal/>
       </GradientBackground>
       <Footer/>
-    </GaleriaProvider>
+    </>
   )
 }
 

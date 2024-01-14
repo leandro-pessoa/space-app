@@ -1,5 +1,7 @@
+// tipagens externas
+import { IVariables } from "../shared/interfaces/IVariables"
 
-const variables = {
+const variables: IVariables = {
     // cores
     blueGradient: 'linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%)',
     pinkGradient: 'linear-gradient(90deg, #C98CF1 0%, #7B78E5 100%)',

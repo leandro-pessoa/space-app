@@ -1,5 +1,5 @@
 // funções
-import { useContext } from "react"
+import { useAppDispatch, useAppSelector } from "../../features/hooks"
 
 // componentes
 import CardGaleria from "../Main/Galeria/CardGaleria"
@@ -11,14 +11,13 @@ import { IoIosClose } from "react-icons/io"
 // variáveis
 import variables from "../../variables"
 
-// context
-import { GaleriaContext } from "../../context/GaleriaContext"
-import { useGaleriaContext } from "../../hooks/useGaleriaContext"
+// actions
+import { closeModal } from "../../features/reducer"
 
 const ZoomModal = () => {
     // states globais
-    const { selectedPicture } = useContext(GaleriaContext)
-    const { closeModal } = useGaleriaContext()
+    const selectedPicture = useAppSelector(state => state.galeria.selectedPicture)
+    const dispatch = useAppDispatch()
 
     if(selectedPicture){
         return (
@@ -29,7 +28,7 @@ const ZoomModal = () => {
                         small={false}
                     />
                     <form method="dialog">
-                        <button onClick={()=>closeModal()}>
+                        <button onClick={()=>dispatch(closeModal())}>
                             <IoIosClose 
                                 size={42}
                                 color={variables.white}
@@ -39,6 +38,9 @@ const ZoomModal = () => {
                 </StyledDialog>
             </Overlay>
         )
+    }
+    else {
+        return <></>
     }
 }
 

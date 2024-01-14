@@ -1,3 +1,6 @@
+// funções
+import { useAppDispatch } from '../../../../features/hooks'
+
 // componentes
 import { StyledFigure } from './styles'
 
@@ -9,12 +12,21 @@ import { CgArrowsExpandRight } from 'react-icons/cg'
 // variáveis
 import variables from '../../../../variables'
 
-// context
-import { useGaleriaContext } from '../../../../hooks/useGaleriaContext'
+// actions
+import { toggleFavorite, selectPicture } from '../../../../features/reducer'
 
-const CardGaleria = ({ small, foto }) => {
+// tipagens externas
+import { IGaleria } from '../../../../shared/interfaces/IGaleria'
+
+// tipagem dos props
+interface CardGaleriaProps {
+    small: boolean,
+    foto: IGaleria
+}
+
+const CardGaleria = ({ small, foto }: CardGaleriaProps) => {
     // states globais
-    const { selectPicture, toggleFavorite } = useGaleriaContext()
+    const dispatch = useAppDispatch()
 
     return (
         <StyledFigure $small={small}>
@@ -24,7 +36,7 @@ const CardGaleria = ({ small, foto }) => {
                 <footer>
                     <p>{foto.fonte}</p>
                     <div>
-                        <button onClick={()=>toggleFavorite(foto)}>
+                        <button onClick={()=>dispatch(toggleFavorite(foto))}>
                             {
                                 foto.favorita ?
                                 <MdFavorite
@@ -40,7 +52,7 @@ const CardGaleria = ({ small, foto }) => {
                         </button>
                         {   
                             small ?
-                            <button onClick={()=>selectPicture(foto)}>
+                            <button onClick={()=>dispatch(selectPicture(foto))}>
                                 <CgArrowsExpandRight
                                     size={24}
                                     color={variables.white}

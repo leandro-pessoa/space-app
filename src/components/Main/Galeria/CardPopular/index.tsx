@@ -1,7 +1,12 @@
 // componentes
 import { StyledDiv } from "./styles"
 
-const CardPopular = ({ path }) => {
+// tipagem dos props
+interface CardPopularProps {
+    path: string
+}
+
+const CardPopular = ({ path }: CardPopularProps) => {
     return (
         <StyledDiv>
             <img src={path}/>

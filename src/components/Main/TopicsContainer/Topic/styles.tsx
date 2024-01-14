@@ -4,7 +4,12 @@ import { styled } from 'styled-components'
 // variáveis
 import variables from '../../../../variables'
 
-const StyledLi = styled.li`
+// tipagem dos props
+interface LiProps {
+    readonly $active: boolean
+}
+
+const StyledLi = styled.li<LiProps>`
     display: flex;
     align-items: center;
     background-color: ${variables.darkGray};

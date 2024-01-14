@@ -4,7 +4,15 @@ import { styled } from 'styled-components'
 // variáveis
 import variables from '../../variables'
 
-const Overlay = styled.div`
+// tipagens externas
+import { IGaleria } from '../../shared/interfaces/IGaleria'
+
+// tipagem dos props
+interface OverlayProps {
+    readonly $display: IGaleria
+}
+
+const Overlay = styled.div<OverlayProps>`
     position: fixed;
     top: 0;
     right: 0;

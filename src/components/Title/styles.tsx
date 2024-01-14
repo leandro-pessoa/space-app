@@ -4,7 +4,12 @@ import { styled } from 'styled-components'
 // variáveis
 import variables from '../../variables'
 
-const StyledH2 = styled.h2`
+// tipagem dos props
+interface H2Props {
+    readonly $align: string
+}
+
+const StyledH2 = styled.h2<H2Props>`
     color: ${variables.lightPurple};
     font-weight: 100;
     font-size: 2rem;

@@ -1,5 +1,5 @@
 // funções
-import { useContext } from 'react'
+import { useAppSelector } from '../../../features/hooks'
 
 // componentes
 import TopicsContainer from '../TopicsContainer'
@@ -9,15 +9,10 @@ import CardGaleria from './CardGaleria'
 import CardPopular from './CardPopular'
 import ButtonSeeMore from '../../ButtonSeeMore'
 
-// context
-import { GaleriaContext } from '../../../context/GaleriaContext'
-
 const Galeria = () => {
     // states globais
-    const { 
-        galeriaArray,
-        popularesArray,
-    } = useContext(GaleriaContext)
+    const galeriaArray = useAppSelector(state => state.galeria.galeriaArray)
+    const popularesArray = useAppSelector(state => state.galeria.popularesArray)
 
     return (
         <>

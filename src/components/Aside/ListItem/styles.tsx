@@ -4,11 +4,15 @@ import { styled } from 'styled-components'
 // variáveis
 import variables from '../../../variables'
 
+interface AProps {
+    readonly $active: boolean
+}
+
 const StyledLi = styled.li`
     margin-bottom: 1.5em;
 `
 
-const StyledA = styled.a`
+const StyledA = styled.a<AProps>`
     display: flex;
     align-items: center;
     gap: 1.1rem;

@@ -4,7 +4,13 @@ import { styled } from 'styled-components'
 // variáveis
 import variables from '../../../../variables'
 
-const StyledFigure = styled.figure`
+// tipagem dos props
+interface FigureProps {
+    readonly $small: boolean
+}
+
+
+const StyledFigure = styled.figure<FigureProps>`
     display: flex;
     flex-direction: column;
     margin: 0;

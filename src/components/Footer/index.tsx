@@ -9,8 +9,11 @@ import { FaInstagram } from "react-icons/fa"
 // variáveis
 import variables from "../../variables"
 
+// tipagens externas
+import { IIcons } from "../../shared/interfaces/IIcons"
+
 const Footer = () => {
-    const iconsParams = {
+    const iconsParams: IIcons = {
         size: 24,
         color: variables.white
     }

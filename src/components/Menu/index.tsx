@@ -1,3 +1,9 @@
+// funções
+import { useAppDispatch } from "../../features/hooks"
+
+// actions
+import { toggleAsideDisplay } from "../../features/reducer"
+
 // ícones
 import { IoMenu } from "react-icons/io5"
 
@@ -7,20 +13,20 @@ import { StyledButton } from "./styles"
 // variáveis
 import variables from "../../variables"
 
-// context
-import { useGaleriaContext } from "../../hooks/useGaleriaContext"
+// tipagens externas
+import { IIcons } from "../../shared/interfaces/IIcons"
 
-const iconParams = {
+const iconParams: IIcons = {
     size: 36,
     color: variables.white
 }
 
 const Menu = () => {
-    const { toggleAsideDisplay } = useGaleriaContext()
+    const dispatch = useAppDispatch()
 
     return (
         <>
-            <StyledButton onClick={()=>toggleAsideDisplay()}>
+            <StyledButton onClick={()=>dispatch(toggleAsideDisplay())}>
                 <IoMenu
                     {...iconParams}
                 />

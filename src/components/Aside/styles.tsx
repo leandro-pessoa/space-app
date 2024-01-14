@@ -4,7 +4,11 @@ import { styled } from 'styled-components'
 // variáveis
 import variables from '../../variables'
 
-const StyledAside = styled.aside`
+interface AsideProps {
+    readonly $display: boolean
+}
+
+const StyledAside = styled.aside<AsideProps>`
     display: flex;
     justify-content: flex-start;
     width: 230px;

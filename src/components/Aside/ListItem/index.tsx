@@ -1,7 +1,14 @@
 // componentes
 import { StyledLi, StyledA } from "./styles"
 
-const ListItem = ({ children, inactiveIcon, activeIcon, active = false }) => {
+interface ListItemProps {
+    children: React.ReactElement | string,
+    inactiveIcon: string,
+    activeIcon: string,
+    active?: boolean
+}
+
+const ListItem = ({ children, inactiveIcon, activeIcon, active = false }: ListItemProps) => {
     return (
         <StyledLi>
             <StyledA
